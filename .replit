@@ -49,3 +49,26 @@ mainClass = "Main"
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "JavaFX App"
+
+[[workflows.workflow]]
+name = "JavaFX App"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "java --module-path javafx-sdk-18.0.2/lib --add-modules javafx.controls,javafx.fxml -cp \".:javafx-sdk-18.0.2/lib/*\" Main"
+
+[workflows.workflow.metadata]
+outputType = "console"

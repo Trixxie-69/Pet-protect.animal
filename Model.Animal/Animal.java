@@ -5,14 +5,14 @@ import java.sql.*;
 
 public class Animal{
     private int id;
-    private String Localizacao;
-    private String Nome;
-    private String Estado;
+    private String localizacao;
+    private String nome;
+    private String estado;
     private Blob imagem;
-    private String Raca;
-    private String Especie; 
+    private String raca;
+    private String especie; 
 
-    public User(int id, String localizacao, String nome, String estado, Blob imagem, String raca, String especie) {
+    public Animal(int id, String localizacao, String nome, String estado, Blob imagem, String raca, String especie) {
         this.id = id;
         this.localizacao = localizacao;
         this.nome = nome;
@@ -56,7 +56,7 @@ public class Animal{
     public String getEspecie()
     { return especie;}
     public void setEspecie(String especie)
-    |{ this.especie = especie; }
+    { this.especie = especie; }
 
   
 

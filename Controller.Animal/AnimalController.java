@@ -1,15 +1,15 @@
 package Controller;
 
 import Db.Database;
-import Model.User;
+import Model.Animal;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserController {
+public class AnimalController {
 
-    public List<User> listarAnimais() {
+    public List<Animal> listarAnimais() {
         List<Animal> animais = new ArrayList<>();
 //try cach para lidar com possíveis exceções
         // tenta e depois fecha a conexão
@@ -26,8 +26,7 @@ public class UserController {
                         rs.getString("estado"),
                         rs.getBlob("imagem"),
                         rs.getString("raca"),
-                        rs.getString("especie"),
-                        
+                        rs.getString("especie")
                 );
                 animais.add(u);
             }
